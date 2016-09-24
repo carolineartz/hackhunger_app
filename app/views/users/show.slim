@@ -1,10 +1,36 @@
 -if current_user.programs.any?
-  h2
+  h1
     | My Programs
   -@user_programs.map do |program|
     p=program.name
 
-h2
+    h4
+      | Planned Meals:
+    -program.meals.map do |meal|
+      div= meal.description
+      div= meal.start_time
+      div= meal.end_time
+      br
+    br
+
+    h4
+      | Add a Meal:
+    = form_for(Meal.new, url: program_meals_path(program)) do |f|
+      .form-group
+        = f.label(:description)
+        = f.text_field(:description)
+        br
+        = f.label(:start_time)
+        = f.datetime_select(:start_time)
+        br
+        = f.label(:end_time)
+        = f.datetime_select(:end_time)
+      .actions
+        = f.submit "Add Meal"
+
+    br
+    br
+h3
   | Add a Meal Program to Manage:
 
 = form_for(current_user, url: user_path) do |f|
