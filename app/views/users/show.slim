@@ -1,0 +1,14 @@
+-if current_user.programs.any?
+  h2
+    | My Programs
+  -@user_programs.map do |program|
+    p=program.name
+
+h2
+  | Add a Meal Program to Manage:
+
+= form_for(current_user, url: user_path) do |f|
+  .form-group
+    = f.select(:programs, options_for_select(@programs.map { |p| [p.name, p.id]}))
+  .actions
+    = f.submit "Manage Program"
