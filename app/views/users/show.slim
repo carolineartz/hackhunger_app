@@ -7,9 +7,12 @@
     h4
       | Planned Meals:
     -program.meals.map do |meal|
-      div= meal.description
-      div= meal.start_time
-      div= meal.end_time
+      div= meal.date
+      div= meal.time_range
+
+      div Menu Items:
+      -meal.description.split("\n").map do |d|
+        div=d
       br
     br
 
@@ -18,7 +21,8 @@
     = form_for(Meal.new, url: program_meals_path(program)) do |f|
       .form-group
         = f.label(:description)
-        = f.text_field(:description)
+        br
+        = f.text_area(:description)
         br
         = f.label(:start_time)
         = f.datetime_select(:start_time)
