@@ -25,10 +25,10 @@
         = f.text_area(:description)
         br
         = f.label(:start_time)
-        = f.datetime_select(:start_time)
+        = f.datetime_select(:start_time, default: 3.days.from_now.beginning_of_day + 11.hours)
         br
         = f.label(:end_time)
-        = f.datetime_select(:end_time)
+        = f.datetime_select(:end_time, default: 3.days.from_now.beginning_of_day + 14.hours)
       .actions
         = f.submit "Add Meal"
 
@@ -42,3 +42,9 @@ h3
     = f.select(:programs, options_for_select(@programs.map { |p| [p.name, p.id]}))
   .actions
     = f.submit "Manage Program"
+  br
+  br
+  br
+  br
+  br
+  br
