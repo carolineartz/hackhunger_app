@@ -6,7 +6,10 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body
-    p.notice= notice
-    p.alert= alert
-    = yield
+  body.bg-faded
+    .container
+      div.notice
+        div.alert-success= notice
+      div.alert
+        div.alert-warning= alert
+      = yield
