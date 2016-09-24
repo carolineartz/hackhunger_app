@@ -1,5 +1,6 @@
 -if current_user
   p=current_user.email
   div=link_to "Log Out", "/users/sign_out", method: "delete"
+  div=link_to "My Profile", "/users/#{current_user.id}"
 -else
   div=link_to "Sign In", "/users/sign_in"
