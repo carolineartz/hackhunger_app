@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bootstrap', '~> 4.0.0.alpha4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -43,6 +45,27 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'awesome_print'
+  gem 'bullet'
+  gem 'rails_semantic_logger'
+  gem 'lograge'
+  gem 'pry-stack_explorer'
+  gem 'pry-exception_explorer'
+  gem 'pry-state'
+  gem 'pry-inline'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rubocop'
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
