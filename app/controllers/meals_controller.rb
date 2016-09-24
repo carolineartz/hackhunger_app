@@ -23,7 +23,8 @@ class MealsController < ApplicationController
   end
 
   def datetime(f)
-    DateTime.new(year(f), month(f), day(f), hour(f), minute(f))
+    Time.zone = "Chicago/America"
+    Time.zone.local(year(f), month(f), day(f), hour(f), minute(f))
   end
 
   %i(year month day hour minute).each_with_index do |method_name, i|
