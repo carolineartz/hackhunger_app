@@ -44,8 +44,6 @@ GEM
       execjs
     awesome_print (1.7.0)
     bcrypt (3.1.11)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     bootstrap (4.0.0.alpha4)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
@@ -126,17 +124,8 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    pry-doc (0.9.0)
-      pry (~> 0.9)
-      yard (~> 0.8)
-    pry-exception_explorer (0.2.3)
-      pry-stack_explorer (>= 0.4.6)
-    pry-inline (1.0.2)
-      pry (~> 0.10.0)
-      unicode (~> 0.4.4)
-    pry-stack_explorer (0.4.9.2)
-      binding_of_caller (>= 0.7)
-      pry (>= 0.9.11)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     pry-state (0.1.7)
       pry (>= 0.9.10, < 0.11.0)
     puma (3.6.0)
@@ -239,7 +228,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
-    unicode (0.4.4.2)
     unicode-display_width (1.1.1)
     uniform_notifier (1.10.0)
     warden (1.2.6)
@@ -252,7 +240,6 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    yard (0.9.5)
 
 PLATFORMS
   ruby
@@ -272,12 +259,8 @@ DEPENDENCIES
   listen (~> 3.0.5)
   lograge
   pg (~> 0.18)
-  pry
   pry-byebug
-  pry-doc
-  pry-exception_explorer
-  pry-inline
-  pry-stack_explorer
+  pry-rails
   pry-state
   puma (~> 3.0)
   rails (~> 5.0.0)

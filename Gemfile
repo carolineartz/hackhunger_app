@@ -47,17 +47,13 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry'
+  gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'pry-doc'
   gem 'awesome_print'
   gem 'bullet'
   gem 'rails_semantic_logger'
   gem 'lograge'
-  gem 'pry-stack_explorer'
-  gem 'pry-exception_explorer'
   gem 'pry-state'
-  gem 'pry-inline'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_girl'
